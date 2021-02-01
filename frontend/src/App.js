@@ -16,8 +16,7 @@ function App() {
       <Router>
         <div>
           {/* <Navigation /> */}
-          <Header />
-
+          {/* <Header /> */}
           <div className="main-content">
             <Switch>
               <Route path="/">
