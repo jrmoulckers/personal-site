@@ -6,6 +6,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Feed from "./Feed";
 import Contact from "./Contact";
+import Navigation from "../Navigation"
 
 const placeholderEvents = [
   {
@@ -30,6 +31,7 @@ function Homepage(props) {
   return (
     <section className="homepage">
       <Splash />
+      <Navigation />
       --
       <About bucket={props.bucket} />
       --

@@ -1,0 +1,143 @@
+@import "./Homepage.scss";
+
+.splash {
+  height: 100vh;
+  background-color: $jrm-dark;
+
+  a {
+    height: 46px;
+    width: 200px;
+    margin: 20px 0;
+  }
+
+  button.mailing-list {
+    border: 2px solid $jrm-blue;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 46px;
+    width: 200px;
+    background-color: transparent;
+    color: $jrm-blue;
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s all;
+
+    &:hover,
+    &:focus {
+      background-color: $jrm-blue;
+      color: white;
+    }
+  }
+
+  .content {
+    span {
+      color: $jrm-light-blue;
+    }
+
+    .welcome-message {
+      text-align: center;
+      color: $light-light;
+      margin-bottom: 20px;
+    }
+
+    .check-me-out {
+      border: 2px solid $light-light;
+      color: $light-light;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 46px;
+      width: 200px;
+      background-color: transparent;
+      padding: 0px 12px;
+      font-family: $title-font;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.2s all;
+
+      .splash-arrow {
+        vertical-align: center;
+        transition: 0.1s all;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $jrm-green;
+        border: 2px solid $jrm-green;
+        color: $light-light;
+
+        .splash-arrow {
+          transform: rotate(90deg);
+        }
+      }
+
+      .text {
+        white-space: nowrap;
+      }
+    }
+
+    h1 {
+      font-family: $title-font;
+      color: $title-text;
+      font-size: 32pt;
+      font-weight: normal;
+      line-height: 36pt;
+      margin: 0;
+    }
+
+    h1 + p {
+      font-family: $title-font;
+      color: $subtitle;
+      font-size: 16px;
+      line-height: 18px;
+      margin-top: 4px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 18px;
+      font-family: $content-font;
+      color: $subtitle;
+    }
+  }
+
+  // svg {
+  //   min-width: 550px;
+  //   height: 510px;
+  //   display: block;
+  //   max-width: 700px;
+  // }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Styles */
+  .splash {
+    flex-wrap: wrap;
+  }
+
+  .splash svg {
+    min-width: 0;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  /* Styles */
+  .splash {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 610px) {
+}

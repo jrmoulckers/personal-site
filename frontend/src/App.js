@@ -7,7 +7,7 @@ import AdminPage from "./components/AdminPage/AdminPage";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Homepage from "./components/Homepage";
-// import Navigation from 'components/Navigation';
+import Navigation from './components/Navigation';
 // import Redirect from "components/Redirect";
 
 // const api = require("cosmicjs")({

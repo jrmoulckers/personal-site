@@ -20,7 +20,7 @@ function Skills(props) {
 
   // console.log(data);
 
-  return (
+  return data ? (
     <section className="skills">
       <div className="content">
         <div className="skills-list">
@@ -34,6 +34,8 @@ function Skills(props) {
         </div>
       </div>
     </section>
+  ) : (
+    <div />
   );
 }
 

@@ -11,7 +11,7 @@ function Projects(props) {
         props: "title, metadata",
       })
       .then((data) => {
-        updateData(data.object.metadata);
+        updateData(data.object);
       })
       .catch((error) => {
         console.log(error);
@@ -19,14 +19,18 @@ function Projects(props) {
   }, []);
 
   // console.log(data);
-
-  return (
+  const meta = data?.metadata;
+  const title = "Projects";
+  const contactFields = "";
+  return data ? (
     <section className="projects">
       <div className="content">
         <h1 className="message">{data?.summary}</h1>
         <h1 className="message">{data?.description}</h1>
       </div>
     </section>
+  ) : (
+    <div />
   );
 }
 

@@ -1,0 +1,42 @@
+@import "../../variables";
+@import "../../App.scss";
+
+.navigation {
+  // bottom: 0;
+  // left: 0;
+  position: relative;
+  background: #1b242f;
+  border-bottom: 4px solid $jrm-green;
+  height: 50px;
+  text-align: left;
+  width: 100%;
+  z-index: 99;
+
+  .links {
+    background: transparent;
+    height: initial;
+    // max-width: 1200px;
+    // overflow: visible;
+    position: initial;
+    top: 53px;
+    transition: height 0.3s ease-out;
+    width: 100%;
+    text-align: right;
+    margin-right: 10vw;
+
+    .nav-link {
+      color: $light-light;
+      display: inline;
+      font-size: 20px;
+      margin: 0 20px;
+      transition: 0.3s all;
+      padding: 10px 10px;
+
+      &:hover,
+      &:focus {
+        color: $jrm-light-blue;
+        cursor: pointer;
+      }
+    }
+  }
+}

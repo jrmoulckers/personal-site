@@ -8,7 +8,7 @@ function Skills(props) {
     props.bucket
       .getObjects({
         type: "feed-posts",
-        props: "slug, title, metadata",
+        props: "slug, metadata",
       })
       .then((data) => {
         updateData(data.objects);
@@ -19,10 +19,13 @@ function Skills(props) {
       });
   }, []);
 
-  // console.log(data);
+  console.log(data);
 
-  return (
+  const title = "Blog";
+  const contactFields = "";
+  return data ? (
     <section className="feed">
+      <h1 className="homepage-title">{title}</h1>
       <div className="content">
         <h1 className="feed-list">
           {data?.map((d) => (
@@ -33,9 +36,12 @@ function Skills(props) {
               <p className="images">{d.metadata.images}</p>
             </div>
           ))}
+          {contactFields}
         </h1>
       </div>
     </section>
+  ) : (
+    <div />
   );
 }
 

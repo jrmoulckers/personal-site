@@ -11,21 +11,26 @@ function About(props) {
         props: "title, metadata",
       })
       .then((data) => {
-        updateData(data.object.metadata);
+        updateData(data.object);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  // console.log(data);
-
-  return (
+  const meta = data?.metadata;
+  const title = data?.title;
+  const aboutFields = "";
+  return data ? (
     <section className="about">
+      <h1 className="homepage-title">{title}</h1>
       <div className="content">
-        <h1 className="message">{data?.description}</h1>
+        <h1 className="message">{meta.description}</h1>
+        {aboutFields}
       </div>
     </section>
+  ) : (
+    <div />
   );
 }
 
