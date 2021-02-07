@@ -11,7 +11,7 @@ function Splash(props) {
           Check out my portfolio.
         </h1>
         <div style={{ textAlign: "center" }}>
-          <div className="button check-me-out">
+          <div className="button view-my-work">
             <div className="text">View my work</div>
             <MdArrowForward className="splash-arrow rotate-right" />
           </div>

@@ -1,12 +1,13 @@
 @import "../../variables";
-@import "../../App.scss";
 
-.navigation {
+section.navigation {
+  margin: 0;
+
   // bottom: 0;
   // left: 0;
   position: relative;
   background: #1b242f;
-  border-bottom: 4px solid $jrm-green;
+  border-bottom: 3px solid $jrm-orange;
   height: 50px;
   text-align: left;
   width: 100%;

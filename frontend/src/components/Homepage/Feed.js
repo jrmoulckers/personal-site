@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Homepage.scss";
 
 function Skills(props) {
   const [data, updateData] = useState(null);
@@ -8,7 +7,7 @@ function Skills(props) {
     props.bucket
       .getObjects({
         type: "feed-posts",
-        props: "slug, metadata",
+        props: "slug,metadata",
       })
       .then((data) => {
         updateData(data.objects);
@@ -24,7 +23,7 @@ function Skills(props) {
   const title = "Blog";
   const contactFields = "";
   return data ? (
-    <section className="feed">
+    <section className="feed flex">
       <h1 className="homepage-title">{title}</h1>
       <div className="content">
         <h1 className="feed-list">

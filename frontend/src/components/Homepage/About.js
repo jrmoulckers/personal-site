@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./Homepage.scss";
+import Imgix from "react-imgix";
+import Skills from "./Skills";
+
+import { getLineDelineated } from "../util/CosmicFunctions.js";
 
 function About(props) {
   const [data, updateData] = useState(null);
@@ -8,7 +11,7 @@ function About(props) {
     props.bucket
       .getObject({
         slug: "about",
-        props: "title, metadata",
+        props: "title,metadata",
       })
       .then((data) => {
         updateData(data.object);
@@ -21,11 +24,29 @@ function About(props) {
   const meta = data?.metadata;
   const title = data?.title;
   const aboutFields = "";
+  console.log(data);
   return data ? (
-    <section className="about">
-      <h1 className="homepage-title">{title}</h1>
+    <section className="about flex">
+      <h1 className="section-title">{title}</h1>
+      <div className="header-underline" />
       <div className="content">
-        <h1 className="message">{meta.description}</h1>
+        <div className="flex-row">
+          <div className="flex" style={{ width: "50%" }}>
+            <div className="flex">
+              <Imgix
+                src="https://imgix.cosmicjs.com/23d44e20-e19e-11ea-88aa-0bae7ba3a376-Seattle-Profile-Pic.JPG"
+                sizes="20vw"
+                className="profile-pic"
+              />
+            </div>
+            <div className="message">
+              {getLineDelineated(meta.description_lines)}
+            </div>
+          </div>
+          <div className="flex" style={{ width: "50%" }}>
+            <Skills bucket={props.bucket} />
+          </div>
+        </div>
         {aboutFields}
       </div>
     </section>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Homepage.scss";
 
 function Projects(props) {
   const [data, updateData] = useState(null);
@@ -8,7 +7,7 @@ function Projects(props) {
     props.bucket
       .getObject({
         slug: "projects",
-        props: "title, metadata",
+        props: "title,metadata",
       })
       .then((data) => {
         updateData(data.object);
@@ -23,7 +22,7 @@ function Projects(props) {
   const title = "Projects";
   const contactFields = "";
   return data ? (
-    <section className="projects">
+    <section className="projects flex">
       <div className="content">
         <h1 className="message">{data?.summary}</h1>
         <h1 className="message">{data?.description}</h1>

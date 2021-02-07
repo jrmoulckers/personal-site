@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Homepage.scss";
 import Splash from "./Splash";
 import About from "./About";
-import Skills from "./Skills";
 import Projects from "./Projects";
 import Feed from "./Feed";
 import Contact from "./Contact";
@@ -32,10 +31,7 @@ function Homepage(props) {
     <section className="homepage">
       <Splash />
       <Navigation />
-      --
       <About bucket={props.bucket} />
-      --
-      <Skills bucket={props.bucket} />
       --
       <Projects bucket={props.bucket} />
       --

@@ -1,9 +1,38 @@
 @import "../../variables";
-@import "../../App.scss";
 
 body {
   font-family: $content-font;
 }
+
+section.homepage, section.skills {
+  margin: 0;
+}
+
+a {
+  height: 46px;
+  width: 200px;
+  margin: 20px 0;
+}
+
+.content {
+  span {
+    color: $jrm-light-blue;
+  }
+
+  .message {
+    text-align: center;
+    padding: 5vh 0;
+    height: 100%;
+  }
+}
+
+
+// svg {
+//   min-width: 550px;
+//   height: 510px;
+//   display: block;
+//   max-width: 700px;
+// }
 
 @media only screen and (max-width: 800px) {
   /* Styles */
@@ -62,7 +91,6 @@ body {
 
   .caption {
     font-size: 24px;
-    line-height: 32px;
     font-family: $title-font;
     color: $title-text;
     text-align: center;
@@ -97,13 +125,11 @@ body {
 
       .name {
         font-size: 24px;
-        line-height: 32px;
         font-family: $title-font;
       }
 
       .description {
         font-size: 16px;
-        line-height: 22px;
         font-family: $content-font;
       }
     }
@@ -113,10 +139,6 @@ body {
 .upcoming-events {
   background-color: $faded-blue;
   padding: 0 20px;
-
-  .section-title {
-    margin-bottom: 100px;
-  }
 
   .content-wrapper {
     margin: 100px auto;
@@ -156,7 +178,6 @@ body {
     h1 {
       font-weight: bold;
       font-size: 48px;
-      line-height: 63px;
       font-family: $title-font;
       color: $jrm-blue;
       padding: 60px 0;

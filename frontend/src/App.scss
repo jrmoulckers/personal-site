@@ -6,10 +6,21 @@ html {
   padding: 0;
 }
 
+section {
+  margin: 12vh 10vw;
+}
+
 .flex {
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.flex-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -23,8 +34,25 @@ html {
   transition: all 0.5s;
 }
 
-.main-content {
-  min-height: 60vh;
+h1 {
+  font-family: $title-font;
+  color: $title-text;
+  font-size: 32pt;
+  font-weight: bold;
+}
+
+h1 + p {
+  font-family: $title-font;
+  color: $subtitle;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2;
+  font-family: $content-font;
+  color: $text;
 }
 
 a {
@@ -32,6 +60,29 @@ a {
   &:visited {
     color: currentColor;
   }
+}
+
+.main-content {
+  min-height: 60vh;
+}
+
+.section-title {
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.header-underline {
+  background: $title-text;
+  height: 4px;
+  width: 75px;
+  margin: 2vh 0 5vh 0;
+}
+
+.profile-pic {
+  margin: 24px;
 }
 
 .fancy {
@@ -58,27 +109,5 @@ a {
     &::after {
       width: 100%;
     }
-  }
-}
-
-.section-title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  font-family: $title-font;
-  position: relative;
-  width: max-content;
-  margin-bottom: 100px;
-
-  &::after {
-    content: " ";
-    width: calc(100% + 15px);
-    height: 3px;
-    background-color: $jrm-blue;
-    position: absolute;
-    bottom: -16px;
-    left: 0;
-    right: 0;
-    margin: auto;
   }
 }

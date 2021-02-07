@@ -1,8 +1,9 @@
-@import "./Homepage.scss";
+@import "../../variables";
 
-.splash {
+section.splash {
   height: 100vh;
   background-color: $jrm-dark;
+  margin: 0;
 
   a {
     height: 46px;
@@ -22,7 +23,6 @@
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 18px;
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.2s all;
@@ -45,7 +45,7 @@
       margin-bottom: 20px;
     }
 
-    .check-me-out {
+    .view-my-work {
       border: 2px solid $light-light;
       color: $light-light;
       box-sizing: border-box;
@@ -55,22 +55,22 @@
       height: 46px;
       width: 200px;
       background-color: transparent;
-      padding: 0px 12px;
+      padding: 0 0 0 12px;
       font-family: $title-font;
       font-size: 22px;
-      line-height: 20px;
       cursor: pointer;
       transition: 0.2s all;
 
       .splash-arrow {
-        vertical-align: center;
         transition: 0.1s all;
+        height: 1.3em;
+        width: 1.3em;
       }
 
       &:hover,
       &:focus {
-        background-color: $jrm-green;
-        border: 2px solid $jrm-green;
+        background-color: $jrm-orange;
+        border: 2px solid $jrm-orange;
         color: $light-light;
 
         .splash-arrow {
@@ -88,7 +88,6 @@
       color: $title-text;
       font-size: 32pt;
       font-weight: normal;
-      line-height: 36pt;
       margin: 0;
     }
 
@@ -96,24 +95,15 @@
       font-family: $title-font;
       color: $subtitle;
       font-size: 16px;
-      line-height: 18px;
       margin-top: 4px;
     }
 
     p {
       font-size: 16px;
-      line-height: 18px;
       font-family: $content-font;
       color: $subtitle;
     }
   }
-
-  // svg {
-  //   min-width: 550px;
-  //   height: 510px;
-  //   display: block;
-  //   max-width: 700px;
-  // }
 }
 
 @media only screen and (max-width: 800px) {
