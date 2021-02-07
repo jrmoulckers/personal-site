@@ -19,10 +19,7 @@ section.splash {
     width: 200px;
     background-color: transparent;
     color: $jrm-blue;
-    font-family: $title-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
+    font: $title-font;
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.2s all;
@@ -40,9 +37,7 @@ section.splash {
     }
 
     .welcome-message {
-      text-align: center;
       color: $light-light;
-      margin-bottom: 20px;
     }
 
     .view-my-work {
@@ -53,11 +48,10 @@ section.splash {
       justify-content: space-evenly;
       align-items: center;
       height: 46px;
-      width: 200px;
+      // width: 200px;
       background-color: transparent;
-      padding: 0 0 0 12px;
-      font-family: $title-font;
-      font-size: 22px;
+      padding: 0 4px 0 12px;
+      font: $big-content-font;
       cursor: pointer;
       transition: 0.2s all;
 
@@ -80,28 +74,8 @@ section.splash {
 
       .text {
         white-space: nowrap;
+        padding-right: 4px;
       }
-    }
-
-    h1 {
-      font-family: $title-font;
-      color: $title-text;
-      font-size: 32pt;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    h1 + p {
-      font-family: $title-font;
-      color: $subtitle;
-      font-size: 16px;
-      margin-top: 4px;
-    }
-
-    p {
-      font-size: 16px;
-      font-family: $content-font;
-      color: $subtitle;
     }
   }
 }

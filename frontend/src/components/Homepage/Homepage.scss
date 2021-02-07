@@ -1,17 +1,11 @@
 @import "../../variables";
 
 body {
-  font-family: $content-font;
+  font: $content-font;
 }
 
 section.homepage, section.skills {
   margin: 0;
-}
-
-a {
-  height: 46px;
-  width: 200px;
-  margin: 20px 0;
 }
 
 .content {
@@ -72,134 +66,6 @@ a {
   /* Styles */
   .content {
     margin-left: 0 !important;
-  }
-}
-
-.slider {
-  margin-top: 180px;
-  background-color: $faded-blue;
-  padding: 20px 0 60px 0;
-
-  .image-gallery {
-    margin: 60px auto;
-    max-width: 1240px;
-
-    img {
-      max-width: 1080px;
-    }
-  }
-
-  .caption {
-    font-size: 24px;
-    font-family: $title-font;
-    color: $title-text;
-    text-align: center;
-  }
-}
-
-.member-highlight {
-  margin: 60px auto;
-  max-width: 1240px;
-  padding: 0 20px;
-  min-height: 440px;
-
-  img {
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 300px;
-    max-height: 300px;
-    border-radius: 100%;
-    object-fit: cover;
-  }
-
-  .member-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 60px;
-    color: $title-text;
-
-    .content {
-      max-width: 800px;
-      margin-left: 30px;
-
-      .name {
-        font-size: 24px;
-        font-family: $title-font;
-      }
-
-      .description {
-        font-size: 16px;
-        font-family: $content-font;
-      }
-    }
-  }
-}
-
-.upcoming-events {
-  background-color: $faded-blue;
-  padding: 0 20px;
-
-  .content-wrapper {
-    margin: 100px auto;
-    max-width: 1240px;
-    padding: 60px 0;
-  }
-}
-
-.twitter-feed {
-  margin: 60px auto;
-  max-width: 1240px;
-  padding: 0 20px;
-
-  .tweet-wrapper {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .timeline-Header {
-    display: none;
-  }
-
-  .feed-wrapper {
-    min-height: 440px;
-  }
-}
-
-.leadership {
-  background-color: $faded-blue;
-
-  .container {
-    margin: 0 auto;
-    margin-top: 100px;
-    max-width: 1240px;
-
-    h1 {
-      font-weight: bold;
-      font-size: 48px;
-      font-family: $title-font;
-      color: $jrm-blue;
-      padding: 60px 0;
-      text-align: center;
-      margin: 0;
-    }
-  }
-
-  .leadership-wrapper {
-    padding-bottom: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .card {
-    img {
-      height: 380px;
-      width: 380px;
-      object-fit: cover;
-      object-position: 50% 30%;
-    }
   }
 }
 

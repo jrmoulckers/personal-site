@@ -29,29 +29,47 @@ section {
   box-sizing: inherit;
   cursor: pointer;
   display: inline-block;
-  font-size: 13pt;
+  font: $header-font;
   padding: 10px 20px;
   transition: all 0.5s;
 }
 
-h1 {
-  font-family: $title-font;
+h1, .h1 {
+  font: $title-font;
   color: $title-text;
-  font-size: 32pt;
-  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-h1 + p {
-  font-family: $title-font;
-  color: $subtitle;
-  font-size: 18px;
-  margin-top: 4px;
+h2, .h2 {
+  font: $big-header-font-bold;
+  color: $header-text;
+  text-align: center;
+  margin-bottom: 10px;
 }
+
+h3, .h3 {
+  font: $header-font;
+  color: $header-text;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h4, .h4 {
+  font: $small-header-font;
+  color: $header-text;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+// h1 + p {
+//   font: $title-font;
+//   color: $subtitle;
+//   margin-top: 4px;
+// }
 
 p {
-  font-size: 18px;
-  line-height: 2;
-  font-family: $content-font;
+  font: $content-font;
   color: $text;
 }
 
@@ -67,7 +85,6 @@ a {
 }
 
 .section-title {
-  font-weight: bold;
   position: relative;
   width: max-content;
   margin: 0;

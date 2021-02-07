@@ -23,12 +23,12 @@ section.navigation {
     transition: height 0.3s ease-out;
     width: 100%;
     text-align: right;
-    margin-right: 10vw;
+    margin-right: 8vw;
 
     .nav-link {
       color: $light-light;
       display: inline;
-      font-size: 20px;
+      font: $small-header-font;
       margin: 0 20px;
       transition: 0.3s all;
       padding: 10px 10px;

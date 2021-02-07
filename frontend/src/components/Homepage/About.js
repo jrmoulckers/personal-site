@@ -27,7 +27,7 @@ function About(props) {
   console.log(data);
   return data ? (
     <section className="about flex">
-      <h1 className="section-title">{title}</h1>
+      <h2 className="section-title">{title}</h2>
       <div className="header-underline" />
       <div className="content">
         <div className="flex-row">
