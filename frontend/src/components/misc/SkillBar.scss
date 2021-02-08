@@ -1,7 +1,7 @@
 @import "../../variables";
 
 .skill-bar-container {
-  height: 2em;
+  height: 24px;
   width: 100%;
   margin-bottom: 10px;
   justify-content: left;
@@ -31,10 +31,10 @@
     // border: 2px solid $jrm-yellow;
     background-color: $jrm-yellow;
   }
-.value {
-  text-align: right;
-  padding-right: 8px;
-  font-weight: bold;
-  color: $subtitle;
-}
+  .value {
+    text-align: right;
+    padding-right: 8px;
+    font-weight: bold;
+    color: $subtitle;
+  }
 }

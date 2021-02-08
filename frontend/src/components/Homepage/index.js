@@ -5,7 +5,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Feed from "./Feed";
 import Contact from "./Contact";
-import Navigation from "../Navigation"
+import Navigation from "../Navigation";
 
 const placeholderEvents = [
   {

@@ -23,7 +23,7 @@ function Skills(props) {
   const title = "Blog";
   const contactFields = "";
   return data ? (
-    <section className="feed flex">
+    <section className="feed flex" id="homepage-feed">
       <h1 className="homepage-title">{title}</h1>
       <div className="content">
         <h1 className="feed-list">

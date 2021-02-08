@@ -23,7 +23,7 @@ function Contact(props) {
   const title = data?.title;
   const contactFields = "";
   return data ? (
-    <section className="contact flex">
+    <section className="contact flex" id="homepage-contact">
       <h1 className="homepage-title">{title}</h1>
       <div className="content">
         <h1 className="message">{meta.description}</h1>
