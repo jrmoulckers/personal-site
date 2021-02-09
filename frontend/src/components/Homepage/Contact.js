@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 
 function Contact(props) {
   const [data, updateData] = useState(null);
+  const [phoneIsActive, setPhoneActive] = useState(false);
+  const [emailIsActive, setEmailActive] = useState(false);
+  const [studentEmailIsActive, setStudentEmailActive] = useState(false);
 
   useEffect(() => {
     props.bucket
@@ -21,13 +24,52 @@ function Contact(props) {
 
   const meta = data?.metadata;
   const title = data?.title;
-  const contactFields = "";
+  const contact = meta?.extra_data;
   return data ? (
     <section className="contact flex" id="homepage-contact">
-      <h1 className="homepage-title">{title}</h1>
+      <div className="section-title-container flex">
+        <h2 className="section-title">{title}</h2>
+        <div className="header-underline" />
+      </div>
       <div className="content">
-        <h1 className="message">{meta.description}</h1>
-        {contactFields}
+        <h3 className="message">{meta.summary}</h3>
+        <div className="contact-info flex-row">
+          <div
+            className={`h4 phone ${phoneIsActive ? "hidden" : "visible"}`}
+            onClick={() => setPhoneActive(true)}
+          >
+            Phone
+          </div>
+          <div className={`h4 phone ${phoneIsActive ? "visible" : "hidden"}`}>
+            {contact.phone}
+          </div>
+          <div className="dot-char"> &#9679; </div>
+          <div
+            className={`h4 email ${emailIsActive ? "hidden" : "visible"}`}
+            onClick={() => setEmailActive(true)}
+          >
+              Email
+          </div>
+          <div className={`h4 email ${emailIsActive ? "visible" : "hidden"}`}>
+            {contact.email}
+          </div>
+          {/* <div className="dot-char"> &#9679; </div>
+          <div
+            className={`h4 student-email ${
+              studentEmailIsActive ? "hidden" : "visible"
+            }`}
+            onClick={() => setStudentEmailActive(true)}
+          >
+            Student Email
+          </div>
+          <div
+            className={`h4 student-email ${
+              studentEmailIsActive ? "visible" : "hidden"
+            }`}
+          >
+            {contact.student}
+          </div> */}
+        </div>
       </div>
     </section>
   ) : (

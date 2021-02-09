@@ -1,17 +1,18 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Imgix from "react-imgix";
 import Skills from "./Skills";
 
 import { getLineDelineated } from "../util/CosmicFunctions.js";
-const Article = forwardRef(({ onBackClick }, ref) => {
-  return (
-    <article>
-      <h1 ref={ref}>A React article for Latin readers</h1>
-      // Rest of the article's content...
-      <button onClick={onBackClick}>Back to the top</button>
-    </article>
-  );
-});
+// const Article = forwardRef(({ onBackClick }, ref) => {
+//   return (
+//     <article>
+//       <h1 ref={ref}>A React article for Latin readers</h1>
+//       // Rest of the article's content...
+//       <button onClick={onBackClick}>Back to the top</button>
+//     </article>
+//   );
+// });
+
 function About(props) {
   const [data, updateData] = useState(null);
 
@@ -32,7 +33,7 @@ function About(props) {
   const meta = data?.metadata;
   const title = data?.title;
   const aboutFields = "";
-  console.log(data);
+  // console.log(data);
   return data ? (
     <section className="about flex" id="homepage-about">
       <div className="section-title-container flex">

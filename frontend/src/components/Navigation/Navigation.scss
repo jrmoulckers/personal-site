@@ -2,7 +2,6 @@
 
 section.navigation {
   padding: 0;
-  position: relative;
   background: #1b242f;
   border-bottom: 3px solid $jrm-orange;
   min-height: 50px;
@@ -38,3 +37,21 @@ section.navigation {
     }
   }
 }
+
+// .navigation-sticky {
+//   // background: #333;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   box-shadow: 1px 1px 1px #222;
+//   animation: moveDown .5s ease-in-out;
+// }
+
+// @keyframes moveDown {
+//   from {
+//     transform: translateY(-5rem);
+//   }
+//   to {
+//     transform: translateY(0rem);
+//   }
+// }
