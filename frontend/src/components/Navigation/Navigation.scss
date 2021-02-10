@@ -38,20 +38,20 @@ section.navigation {
   }
 }
 
-// .navigation-sticky {
-//   // background: #333;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   box-shadow: 1px 1px 1px #222;
-//   animation: moveDown .5s ease-in-out;
-// }
+.navigation-sticky {
+  // background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 1px #222;
+  // animation: moveDown .5s ease-in-out;
+}
 
-// @keyframes moveDown {
-//   from {
-//     transform: translateY(-5rem);
-//   }
-//   to {
-//     transform: translateY(0rem);
-//   }
-// }
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}

@@ -18,7 +18,7 @@ function Skills(props) {
       });
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   const title = "Blog";
   const contactFields = "";

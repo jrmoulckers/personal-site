@@ -3,8 +3,9 @@ import "./Navigation.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navigation(props) {
+  // console.log(props.sticky);
   return (
-    <div style={{height: "50px"}}>
+    <div style={{ height: "50px" }} ref={props.element}>
       <section
         className={`flex ${
           props.sticky ? "navigation navigation-sticky" : "navigation"

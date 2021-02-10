@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import Feed from "./Feed";
 import Contact from "./Contact";
 import Navigation from "../Navigation";
+import useSticky from "../util/useSticky";
 
 // const placeholderEvents = [
 //   {
@@ -27,11 +28,12 @@ import Navigation from "../Navigation";
 // ];
 
 function Homepage(props) {
+  const { isSticky, element } = useSticky();
 
   return (
     <section className="homepage">
       <Splash />
-      <Navigation />
+      <Navigation sticky={isSticky} element={element} />
       <About bucket={props.bucket} />
       --
       <Projects bucket={props.bucket} />
