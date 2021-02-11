@@ -1,5 +1,8 @@
 @import "variables";
 
+$section-padding: 0 10vw 0 10vw;
+$section-title-container-margin: 7vh 0 5vh 0;
+
 body,
 html {
   margin: 0;
@@ -7,8 +10,8 @@ html {
 }
 
 section {
-  padding: 10vh 10vw 0 10vw;
-  min-height: 90vh;
+  padding: $section-padding;
+  min-height: calc(100vh - #{$nav-height});
 }
 
 .flex {
@@ -110,10 +113,10 @@ a {
 }
 
 .section-title-container {
-  height: 10vh;
+  height: 14vh;
   position: relative;
   width: max-content;
-  margin: 0 0 5vh 0;
+  margin: $section-title-container-margin;
 }
 
 .section-title {

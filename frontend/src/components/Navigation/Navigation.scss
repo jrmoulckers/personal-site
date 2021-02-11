@@ -1,22 +1,31 @@
 @import "../../variables";
 
+$nav-border-bottom-height: 3px;
+$nav-link-margin: 0 20px;
+
+.navigation-container {
+  height: $nav-height;
+}
+
 section.navigation {
+  position: relative;
   padding: 0;
-  background: #1b242f;
-  border-bottom: 3px solid $jrm-orange;
-  min-height: 50px;
+  background: $jrm-dark;
+  border-bottom: $nav-border-bottom-height solid $jrm-orange;
+  min-height: initial;
+  height: $nav-height - $nav-border-bottom-height;
   text-align: left;
   width: 100%;
   z-index: 99;
+  box-shadow: $shadow;
 
-  .links {
+  .navigation-links-container {
     background: transparent;
     height: initial;
     // max-width: 1200px;
     // overflow: visible;
     position: initial;
-    top: 53px;
-    transition: height 0.3s ease-out;
+    transition: 0.3s ease-out;
     width: 100%;
     text-align: right;
     margin-right: 8vw;
@@ -25,7 +34,7 @@ section.navigation {
       color: $light-light;
       display: inline;
       font: $small-header-font;
-      margin: 0 20px;
+      margin: $nav-link-margin;
       transition: 0.3s all;
       padding: 10px 10px;
 
@@ -40,10 +49,9 @@ section.navigation {
 
 .navigation-sticky {
   // background: #333;
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
-  box-shadow: 1px 1px 1px #222;
   // animation: moveDown .5s ease-in-out;
 }
 

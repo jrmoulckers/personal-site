@@ -40,19 +40,25 @@ function Contact(props) {
           >
             Phone
           </div>
-          <div className={`h4 phone ${phoneIsActive ? "visible" : "hidden"}`}>
+          <a
+            href={`tel:+1${contact.phone.replace(/([ ()-])+/g, "")}`}
+            className={`h4 phone ${phoneIsActive ? "visible" : "hidden"}`}
+          >
             {contact.phone}
-          </div>
+          </a>
           <div className="dot-char"> &#9679; </div>
           <div
             className={`h4 email ${emailIsActive ? "hidden" : "visible"}`}
             onClick={() => setEmailActive(true)}
           >
-              Email
+            Email
           </div>
-          <div className={`h4 email ${emailIsActive ? "visible" : "hidden"}`}>
+          <a
+            href={`mailto:${contact.email}`}
+            className={`h4 email ${emailIsActive ? "visible" : "hidden"}`}
+          >
             {contact.email}
-          </div>
+          </a>
           {/* <div className="dot-char"> &#9679; </div>
           <div
             className={`h4 student-email ${

@@ -1,27 +1,28 @@
 @import "../../variables";
 
+$footer-height: 40vh;
+
 .footer {
   color: $light-light;
-  background-color: $jrm-blue;
+  background-color: $jrm-dark;
   font: $content-font;
-
-  .footer-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 250px;
-  }
+  min-height: $footer-height;
 
   .title {
-    font: $title-font-bold;
+    font: $text;
+  }
+
+  .brand {
+    color: $subtitle;
   }
 
   p {
     padding: 6px 10px;
     margin: 0;
+  }
+
+  span {
+    color: $header-text;
   }
 
   a,

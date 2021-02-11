@@ -1,7 +1,9 @@
 @import "../../variables";
 
+$skill-bar-height: 24px;
+
 .skill-bar-container {
-  height: 24px;
+  height: $skill-bar-height;
   width: 100%;
   margin-bottom: 10px;
   justify-content: left;

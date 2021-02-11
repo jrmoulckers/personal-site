@@ -35,11 +35,8 @@ function Homepage(props) {
       <Splash />
       <Navigation sticky={isSticky} element={element} />
       <About bucket={props.bucket} />
-      --
       <Projects bucket={props.bucket} />
-      --
       <Feed bucket={props.bucket} />
-      --
       <Contact bucket={props.bucket} />
     </section>
   );

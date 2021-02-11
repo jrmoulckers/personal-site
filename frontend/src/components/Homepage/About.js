@@ -54,7 +54,7 @@ function About(props) {
               {getLineDelineated(meta.description_lines)}
             </div>
           </div>
-          <div className="flex" style={{ width: "50%" }}>
+          <div className="flex" style={{ width: "50%", height: "100%" }}>
             <Skills bucket={props.bucket} />
           </div>
         </div>

@@ -2,24 +2,25 @@
 
 /* Colors */
 $jrm-blue: #27246a;
-$jrm-dark: #303445;
-$jrm-dark-blue: #003049ff;
-$jrm-dark-blue-opaque: rgba(50, 13, 115, 0.4);
+$jrm-dark: #2b2e3a;
+$jrm-dark-grey: #34384b;
+$jrm-dark-blue: #003049;
+$jrm-dark-blue-opaque: #330d7566;
 $jrm-red: #981b1e;
-$jrm-orange: #f77f00ff;
-$jrm-yellow: #fcbf49ff;
+$jrm-orange: #f77f00;
+$jrm-yellow: #fcbf49;
 $jrm-gold: #eba222;
 $jrm-green: #088c45;
 $jrm-light-blue: #60eafc;
-$jrm-grey: #9c9c9c;
-$jrm-beige: #eae2b7ff;
-$jrm-maroon: #3c0919ff;
-$jrm-light-grey: #eff1edff;
-$jrm-light-green: #c4d6b0ff;
+$jrm-beige: #eae2b7;
+$jrm-maroon: #3c0919;
+$jrm-grey: #b1b1b1;
+$jrm-light-grey: #d8d7d7;
+$jrm-light-green: #c4d6b0;
 $title-text: #31363a;
 $header-text: #3d4449;
 $text: #404a50;
-$subtitle: #adadad;
+$subtitle: #919191;
 $light: #aaaaaa;
 $light-light: #ededed;
 $social-media: #bbbbbb;
@@ -41,3 +42,9 @@ $content-font-bold: bold 12pt/1.25 "Avenir", sans-serif;
 $content-font: 12pt/1.25 "Avenir", sans-serif;
 $small-content-font-bold: bold 10pt/1.25 "Avenir", sans-serif;
 $small-content-font: 10pt/1.25 "Avenir", sans-serif;
+
+/* Sizes */
+$nav-height: 50px;
+
+/* Misc */
+$shadow: 0px 5px 12px $jrm-dark-grey;
