@@ -25,6 +25,11 @@
     z-index: 5;
     opacity: 0;
     transition: 0.5s all;
+
+    .title {
+      text-align: center;
+      font: $big-content-font-bold; 
+    }
   }
 
   &:hover,

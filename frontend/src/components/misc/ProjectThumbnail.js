@@ -8,7 +8,7 @@ function formatProjectTools(tools) {
 function ProjectThumbnail(props) {
   return (
     <div className="project-thumbnail-container">
-      <img className="project-image" src={props.img} alt="testing" />
+      <img className="project-image" src={props.img} alt="testing" style={{objectFit: "cover"}}/>
       <div className="project-info flex">
         <div className="title">{props.title}</div>
         <div className="tools">{formatProjectTools(props.tools)}</div>
