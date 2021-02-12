@@ -1,28 +1,26 @@
 @import "../../variables";
 
+$icon-height: 24pt;
+$icon-container-height: 40pt;
+
 .socials {
-  font-size: 24pt;
-  color: $social-media;
-  display: flex;
-  align-items: center;
-  height: 24px;
-  padding-bottom: 16px;
+  font-size: $icon-height;
+  margin: 5vh;
 
   a,
   a:visited {
     color: $social-media;
-  }
+    background-color: $jrm-dark-grey;
+    height: $icon-container-height;
+    width: $icon-container-height;
+    margin: 10px;
+    justify-content: center;
+    transition: 0.5s all;
 
-  i {
-    margin: 0 12px;
-  }
-}
-
-.footer .socials {
-  color: $light-light;
-
-  a,
-  a:visited {
-    color: $light-light;
+    &:hover,
+    &:focus {
+      background-color: $jrm-orange;
+      color: $jrm-dark;
+    }
   }
 }

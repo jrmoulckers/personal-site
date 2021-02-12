@@ -15,7 +15,6 @@ body {
   }
 
   .message {
-    text-align: center;
     padding: $message-padding;
   }
 }
@@ -62,12 +61,23 @@ section.contact {
 
   .email {
     margin: 10px;
+    color: $header-text;
     // width: 10em;
   }
 
   .student-email {
     margin: 10px;
     // width: 10em;
+  }
+
+  .dot-char {
+    font: $content-font;
+  }
+}
+
+section.projects {
+  .project-list {
+    padding-bottom: 10vh;
   }
 }
 

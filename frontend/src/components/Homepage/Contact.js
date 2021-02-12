@@ -46,7 +46,7 @@ function Contact(props) {
           >
             {contact.phone}
           </a>
-          <div className="dot-char"> &#9679; </div>
+          <div className="h4 dot-char"> &#9679; </div>
           <div
             className={`h4 email ${emailIsActive ? "hidden" : "visible"}`}
             onClick={() => setEmailActive(true)}

@@ -1,43 +1,56 @@
 import React from "react";
 import "./SocialMedia.scss";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 function Socials(props) {
   return (
-    <div className="socials">
+    <div className="socials flex-row">
+      <a
+        href="https://linkedin.com/me/jeffreymoulckers"
+        target="_blank"
+        className="social-container flex"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin className="fa social" />
+      </a>
+
+      <a
+        href="https://github.com/jrmoulckers"
+        target="_blank"
+        className="social-container flex"
+        rel="noopener noreferrer"
+      >
+        <FaGithub className="fa social" />
+      </a>
       <a
         href="https://www.facebook.com/jeffrey.moulckers"
         target="_blank"
+        className="social-container flex"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-facebook-f" />
-      </a>
-      <a
-        href="https://twitter.com/jrmoulckers"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-twitter" />
+        <FaFacebook className="fa social" />
       </a>
       <a
         href="https://www.instagram.com/jeffrey.moulckers"
         target="_blank"
+        className="social-container flex"
         rel="noopener noreferrer"
       >
-        <i className="fab fa-instagram" />
+        <FaInstagram className="fa social" />
       </a>
       <a
-        href="mailto:jrmoulckers@gmail.com"
+        href="https://twitter.com/jrmoulckers"
         target="_blank"
+        className="social-container flex"
         rel="noopener noreferrer"
       >
-        <i className="far fa-envelope" />
-      </a>
-      <a
-        href="https://github.com/jrmoulckers"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-github" />
+        <FaTwitter className="fa social" />
       </a>
     </div>
   );

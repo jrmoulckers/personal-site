@@ -30,7 +30,7 @@ function Projects(props) {
         <div className="header-underline" />
       </div>
       <div className="content">
-        <div className="projects-list grid">
+        <div className="project-list grid">
           {data?.slice(0, NUM_VISIBLE_PROJECTS).map((d) => (
             <ProjectThumbnail
               title={d.title}
