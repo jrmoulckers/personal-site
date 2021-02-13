@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import FeedItem from "../misc/FeedItem";
 
 function Skills(props) {
   const [data, updateData] = useState(null);
@@ -24,19 +25,17 @@ function Skills(props) {
   const contactFields = "";
   return data ? (
     <section className="feed flex" id="homepage-feed">
-      <h1 className="homepage-title">{title}</h1>
+      <div className="section-title-container flex">
+        <h2 className="section-title">{title}</h2>
+        <div className="header-underline" />
+      </div>
       <div className="content">
-        <h1 className="feed-list">
+        <div className="feed-list flex-row">
           {data?.map((d) => (
-            <div className="feed-item-container" key={d.slug}>
-              <p className="source-type">{d.metadata.source_type}</p>
-              <p className="source">{d.metadata.source}</p>
-              <p className="description">{d.metadata.description}</p>
-              <p className="images">{d.metadata.images}</p>
-            </div>
+            <FeedItem data={d} />
           ))}
           {contactFields}
-        </h1>
+        </div>
       </div>
     </section>
   ) : (

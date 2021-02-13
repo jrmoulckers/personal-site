@@ -1,0 +1,42 @@
+@import "../../variables";
+
+.feed-item-container {
+  height: 350px;
+  width: 250px;
+  position: relative;
+
+  .feed-item-info {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.5s all;
+  }
+
+  .feed-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s all;
+
+  }
+
+  &:hover,
+  &:focus {
+    .feed-image {
+      opacity: 0.2;
+    }
+
+    .feed-info {
+      opacity: 1;
+    }
+  }
+}
+
