@@ -12,11 +12,18 @@ function Navigation(props) {
         }`}
       >
         <div className="navigation-links-container">
-          <Link to="homepage-splash" spy={true} smooth={true} duration={500}>
+          <Link
+            to="homepage-splash"
+            activeClass="focus"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <div className="nav-link">Home</div>
           </Link>
           <Link
             to="homepage-about"
+            activeClass="focus"
             spy={true}
             smooth={true}
             duration={500}
@@ -26,6 +33,7 @@ function Navigation(props) {
           </Link>
           <Link
             to="homepage-skills"
+            activeClass="focus"
             spy={true}
             smooth={true}
             duration={500}
@@ -35,6 +43,7 @@ function Navigation(props) {
           </Link>
           <Link
             to="homepage-projects"
+            activeClass="focus"
             spy={true}
             smooth={true}
             duration={500}
@@ -44,6 +53,7 @@ function Navigation(props) {
           </Link>
           <Link
             to="homepage-feed"
+            activeClass="focus"
             spy={true}
             smooth={true}
             duration={500}
@@ -53,6 +63,7 @@ function Navigation(props) {
           </Link>
           <Link
             to="homepage-contact"
+            activeClass="focus"
             spy={true}
             smooth={true}
             duration={500}
