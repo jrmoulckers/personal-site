@@ -1,9 +1,31 @@
 @import "../../variables";
 
 .feed-item-container {
-  height: 350px;
   width: 250px;
+  height: 350px;
   position: relative;
+
+  .feed-item-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s all;
+  }
+
+  &:hover,
+  &:focus {
+    .feed-item-image {
+      opacity: 0.2;
+    }
+
+    .feed-item-info {
+      opacity: 1;
+    }
+  }
 
   .feed-item-info {
     width: 100%;
@@ -15,28 +37,37 @@
     z-index: 5;
     opacity: 0;
     transition: 0.5s all;
-  }
 
-  .feed-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: 0.5s all;
+    .feed-item-title-container {
+      margin-bottom: 10%;
 
-  }
+      .title {
+        font: $small-header-font-bold;
+        color: $title-text;
+      }
 
-  &:hover,
-  &:focus {
-    .feed-image {
-      opacity: 0.2;
+      .source-type {
+        font: $big-content-font;
+        color: $jrm-green;
+      }
     }
 
-    .feed-info {
-      opacity: 1;
+    .button {
+      border: 2px solid $jrm-green;
+      box-sizing: inherit;
+      cursor: pointer;
+      display: inline-block;
+      font: $content-font;
+      padding: 10px 20px;
+      transition: all 0.5s;
+      color: $header-text;
+
+      &:hover,
+      &:focus {
+        background-color: $jrm-green;
+        border: 2px solid $jrm-green;
+        color: $light-light;
+      }
     }
   }
 }
-

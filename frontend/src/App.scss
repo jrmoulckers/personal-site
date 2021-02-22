@@ -100,11 +100,26 @@ a {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  animation: shrinkToCenter .3s;
 }
 
 .visible {
+  visibility: visible;
+  animation: growFromCenter .3s;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
   display: initial;
+}
+
+.circle {
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .main-content {
@@ -156,5 +171,23 @@ a {
     &::after {
       width: 100%;
     }
+  }
+}
+
+@keyframes growFromCenter {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrinkToCenter {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }

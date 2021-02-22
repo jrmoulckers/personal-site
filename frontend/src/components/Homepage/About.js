@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Imgix from "react-imgix";
 import Skills from "./Skills";
 
 import { getLineDelineated } from "../util/CosmicFunctions.js";

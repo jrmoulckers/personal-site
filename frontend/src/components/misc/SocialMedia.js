@@ -12,7 +12,7 @@ function Socials(props) {
   return (
     <div className="socials flex-row">
       <a
-        href="https://linkedin.com/me/jeffreymoulckers"
+        href="https://www.linkedin.com/in/jeffreymoulckers/"
         target="_blank"
         className="social-container flex"
         rel="noopener noreferrer"

@@ -52,7 +52,7 @@ section.feed {
 
 section.contact {
   background-color: $jrm-orange;
-  min-height: 60vh;
+  min-height: calc(60vh - #{$nav-height});
 
   .phone {
     margin: 10px;

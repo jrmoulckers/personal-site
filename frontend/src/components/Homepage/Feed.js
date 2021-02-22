@@ -8,7 +8,7 @@ function Skills(props) {
     props.bucket
       .getObjects({
         type: "feed-posts",
-        props: "slug,metadata",
+        props: "title,slug,metadata",
       })
       .then((data) => {
         updateData(data.objects);
@@ -18,8 +18,6 @@ function Skills(props) {
         console.log(error);
       });
   }, []);
-
-  // console.log(data);
 
   const title = "Blog";
   const contactFields = "";
