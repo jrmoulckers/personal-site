@@ -1,32 +1,54 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import "./ProjectThumbnail.scss";
-
-const NUM_VISIBLE_SKILLS = 2;
-
-function formatProjectTools(tools) {
-  console.log(tools);
-  return tools.slice(0, NUM_VISIBLE_SKILLS).join(" / ");
-}
+import { formatProjectTools } from "../util/Formatting";
+import ProjectModal from "./ProjectModal";
 
 function ProjectThumbnail(props) {
+  const [isModalActive, updateModalActive] = useState(false);
+
+  const { title, tools, img, source, blurb, description, progress } = props;
+  const projectProps = {
+    title,
+    tools,
+    img,
+    source,
+    blurb,
+    description,
+    progress,
+  };
+
   return (
-    <div className="project-thumbnail-container">
-      <img className="project-image" src={props.img} alt="testing" />
-      <div className="project-info flex">
-        <div className="project-title-container">
-          <div className="title">{props.title}</div>
-          <div className="tools">{formatProjectTools(props.tools)}</div>
-        </div>
-        <div className="blurb">{props.blurb}</div>
-        <a href={props.source}>
-          <div className="button see-more">
+    <Fragment>
+      <div className="project-thumbnail-container">
+        <img className="project-image" src={img} alt="testing" />
+        <div className="project-info flex">
+          <div className="project-title-container">
+            <div className="title">{props.title}</div>
+            <div className="tools">{formatProjectTools(tools)}</div>
+          </div>
+          <div className="blurb">{blurb}</div>
+          <div
+            className="button see-more"
+            onClick={() => updateModalActive(true)}
+          >
             <div className="text">See More</div>
           </div>
-        </a>
-        {/* <p className="progress">{props.progress}%</p>
-      <p className="description">{props.description}</p> */}
+          {/* <p className="progress">{progress}%</p>
+      <p className="description">{description}</p> */}
+        </div>
       </div>
-    </div>
+      <ProjectModal
+        setActive={updateModalActive}
+        active={isModalActive}
+        title={title}
+        tools={tools}
+        img={img}
+        source={source}
+        blurb={blurb}
+        description={description}
+        progress={progress}
+      />
+    </Fragment>
   );
 }
 
