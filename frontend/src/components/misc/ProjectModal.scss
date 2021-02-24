@@ -9,12 +9,24 @@
   background-color: $faded;
   // pointer-events: none;
   z-index: 100;
-}
 
-.project-container {
-  height: 80vh;
-  width: 80vh;
-  background-color: red;
-  z-index: 1;
-  // pointer-events: none;
+  .project-container {
+    height: 80vh;
+    width: 70vw;
+    background-color: $light-light;
+    z-index: 1;
+    // pointer-events: none;
+
+    .title-container {
+      .title {
+        font: $big-header-font-bold;
+        color: $title-text;
+      }
+
+      .tools {
+        font: $big-content-font;
+        color: $jrm-green;
+      }
+    }
+  }
 }
