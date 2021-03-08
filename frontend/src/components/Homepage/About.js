@@ -1,16 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Skills from "./Skills";
-
-import { getLineDelineated } from "../util/CosmicFunctions.js";
-// const Article = forwardRef(({ onBackClick }, ref) => {
-//   return (
-//     <article>
-//       <h1 ref={ref}>A React article for Latin readers</h1>
-//       // Rest of the article's content...
-//       <button onClick={onBackClick}>Back to the top</button>
-//     </article>
-//   );
-// });
+import AboutMe from "./AboutMe";
 
 function About(props) {
   const [data, updateData] = useState(null);
@@ -31,8 +21,9 @@ function About(props) {
 
   const meta = data?.metadata;
   const title = data?.title;
-  const aboutFields = "";
-  // console.log(data);
+  const profilePic =
+    "https://imgix.cosmicjs.com/1c8757a0-e259-11ea-ad85-b3e5c5f45697-seattleprofilepic.circle.png";
+
   return data ? (
     <Fragment>
       <section className="about flex" id="homepage-about">
@@ -41,21 +32,8 @@ function About(props) {
           <div className="header-underline" />
         </div>
         <div className="content flex-row">
-          <div className="flex about-me" style={{ width: "50%" }}>
-            <div className="profile-pic-container flex">
-              <img
-                src="https://imgix.cosmicjs.com/1c8757a0-e259-11ea-ad85-b3e5c5f45697-seattleprofilepic.circle.png"
-                className="profile-pic"
-              />
-            </div>
-            <div className="message">
-              {/* <div className="h4 bold">A bit about me...</div> */}
-              {getLineDelineated(meta.description_lines)}
-            </div>
-          </div>
-          <div className="flex" style={{ width: "50%", height: "100%" }}>
+          <AboutMe descr={meta.description_lines} img={profilePic} />
             <Skills bucket={props.bucket} />
-          </div>
         </div>
       </section>
     </Fragment>

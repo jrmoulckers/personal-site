@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Fade from "react-reveal/Fade";
 import ProjectThumbnail from "../misc/ProjectThumbnail";
 
 const NUM_VISIBLE_PROJECTS = 18;
@@ -20,7 +21,6 @@ function Projects(props) {
       });
   }, []);
 
-  // console.log(data);
   const meta = data?.metadata;
   const title = "Projects";
   return data ? (
@@ -29,20 +29,22 @@ function Projects(props) {
         <h2 className="section-title">{title}</h2>
         <div className="header-underline" />
       </div>
-      <div className="content">
-        <div className="project-list grid">
-          {data?.slice(0, NUM_VISIBLE_PROJECTS).map((d) => (
-            <ProjectThumbnail
-              title={d.title}
-              img={d.metadata.splash?.imgix_url}
-              tools={d.metadata.tools}
-              blurb={d.metadata.blurb}
-              slug={d.slug}
-              key={d.slug}
-            />
-          ))}
+      <Fade left>
+        <div className="content">
+          <div className="project-list grid">
+            {data?.slice(0, NUM_VISIBLE_PROJECTS).map((d) => (
+              <ProjectThumbnail
+                title={d.title}
+                img={d.metadata.splash?.imgix_url}
+                tools={d.metadata.tools}
+                blurb={d.metadata.blurb}
+                slug={d.slug}
+                key={d.slug}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </Fade>
     </section>
   ) : (
     <div />

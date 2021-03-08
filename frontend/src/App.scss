@@ -9,10 +9,12 @@ html {
   padding: 0;
   // color: red;
   text-align: center;
+  overflow: overlay;
 }
 
 section {
   padding: $section-padding;
+  width: calc(100vw - (2 * $section-padding));
   min-height: calc(100vh - #{$nav-height});
 }
 
@@ -101,12 +103,12 @@ a {
 
 .hidden {
   visibility: hidden;
-  animation: shrinkToCenter .3s;
+  animation: shrinkToCenter 0.3s;
 }
 
 .visible {
   visibility: visible;
-  animation: growFromCenter .3s;
+  animation: growFromCenter 0.3s;
 }
 
 .inactive {
@@ -190,4 +192,26 @@ a {
   to {
     transform: scale(0);
   }
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 20px;
+  z-index: 1000;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $jrm-dark-grey;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 50px;
+  background-color: $jrm-grey;
 }

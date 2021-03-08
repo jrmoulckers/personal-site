@@ -20,8 +20,11 @@ body {
 }
 
 section.homepage,
-section.skills {
+section.skills,
+section.about-me {
   padding: 0;
+  margin: 0;
+  width: initial;
   min-height: 100%;
 }
 
