@@ -17,15 +17,19 @@
     z-index: 1;
     // pointer-events: none;
 
-    .title-container {
-      .title {
-        font: $big-header-font-bold;
-        color: $title-text;
-      }
+    .project {
+      margin: 10vh 50px;
 
-      .tools {
-        font: $big-content-font;
-        color: $jrm-green;
+      .title-container {
+        .title {
+          font: $big-header-font-bold;
+          color: $title-text;
+        }
+
+        .tools {
+          font: $big-content-font;
+          color: $jrm-green;
+        }
       }
     }
   }

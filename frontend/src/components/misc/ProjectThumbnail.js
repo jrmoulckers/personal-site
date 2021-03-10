@@ -6,24 +6,24 @@ import ProjectModal from "./ProjectModal";
 function ProjectThumbnail(props) {
   const [isModalActive, updateModalActive] = useState(false);
 
-  const { title, tools, img, source, blurb, description, progress } = props;
+  const { title, tools, img, blurb, description, progress } = props;
   const projectProps = {
     title,
     tools,
     img,
-    source,
+    // source,
     blurb,
     description,
     progress,
   };
-
+  console.log(description);
   return (
     <Fragment>
       <div className="project-thumbnail-container">
         <img className="project-image" src={img} alt="testing" />
         <div className="project-info flex">
           <div className="project-title-container">
-            <div className="title">{props.title}</div>
+            <div className="title">{title}</div>
             <div className="tools">{formatProjectTools(tools)}</div>
           </div>
           <div className="blurb">{blurb}</div>
@@ -43,7 +43,7 @@ function ProjectThumbnail(props) {
         title={title}
         tools={tools}
         img={img}
-        source={source}
+        // source={source}
         blurb={blurb}
         description={description}
         progress={progress}

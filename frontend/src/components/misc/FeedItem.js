@@ -18,7 +18,7 @@ function FeedItem(props) {
             <h3 className="source-type">{d.source_type}</h3>
           </div>
           <div className="description">{d.description}</div>
-          <a href={d.source}>
+          <a href={d.source} target="_blank">
             <div className="button see-more">
               <div className="text">See More</div>
             </div>

@@ -35,8 +35,9 @@ function Projects(props) {
             {data?.slice(0, NUM_VISIBLE_PROJECTS).map((d) => (
               <ProjectThumbnail
                 title={d.title}
-                img={d.metadata.splash?.imgix_url}
                 tools={d.metadata.tools}
+                img={d.metadata.splash?.imgix_url}
+                description={d.metadata.description}
                 blurb={d.metadata.blurb}
                 slug={d.slug}
                 key={d.slug}

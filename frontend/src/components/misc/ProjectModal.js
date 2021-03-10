@@ -15,17 +15,19 @@ function ProjectModal(props) {
     >
       <div
         className="project-container flex"
-        onClick={e => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="project-gallery"></div>
-        <div className="title-container">
-          <div className="title">{title}</div>
-          <div className="tools">{formatProjectTools(tools)}</div>
+        <div className="project">
+          <div className="project-gallery"></div>
+          <div className="title-container">
+            <div className="title">{title}</div>
+            <div className="tools">{formatProjectTools(tools)}</div>
+          </div>
+          <div className="description">{description}</div>
+          <a href={source} target="_blank">
+            <div className="visit-site-container button">Visit Site</div>
+          </a>
         </div>
-        <div className="description">{description}</div>
-        <a href={source}>
-          <div className="visit-site-container button">Visit Site</div>
-        </a>
       </div>
     </div>
   ) : (
